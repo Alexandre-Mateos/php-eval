@@ -1,6 +1,7 @@
 <?php
 require "db.php";
-
+require "nb_maisons.php";
+require "prix_total_maisons.php";
 //Prepared SQL query to retrieve all the data from the "maison" table
 $sql = "SELECT * FROM maison";
 $stmt = $pdo->prepare($sql);
@@ -11,6 +12,11 @@ var_dump($houses);
 ?>
 <?php include "header.php" ?>
 <main>
+<h1>Trouvez votre prochain bien immobilier</h1>
+      <h2>Générale</h2>
+      <p>Nombres de maisons disponible à l'achat : <?php echo $count[0]["nb"] ?></p>
+      <p>Valeur totale du parc immobilier : <?php echo $sum[0]["sum"] ?> €</p>
+      <h2>Liste de nos maisons</h2>
       <table>
             <tr>
                   <th>Nom</th>
