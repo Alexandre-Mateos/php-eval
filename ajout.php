@@ -14,7 +14,7 @@
     </form>
     <!--      Alert when an element is missing in the form-->
       <?php if (isset($_GET["error"]) && $_GET["error"] === "1") : ?>
-          <div class="alert alert-success d-flex justify-content-between" role="alert">
+          <div class="alert alert-danger d-flex justify-content-between" role="alert">
               <p>Il manque des informations capitales. Vous devez remplir tous les champs !</p>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
