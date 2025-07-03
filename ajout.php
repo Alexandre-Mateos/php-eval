@@ -1,5 +1,6 @@
 <?php include "header.php" ?>
 <main>
+    <h2>Ajouter un bien immobilier</h2>
       <form method="post" action="ajout_treatment.php">
             <label for="name">Nom</label>
             <input id="name" type="text" name="name">
