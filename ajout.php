@@ -11,5 +11,8 @@
             <input id="price" type="number" name="price">
             <button type="submit">Ajouter</button>
       </form>
+      <?php if(isset($_GET["error"]) && $_GET["error"] === "1") : ?>
+            <p>Il manque des informations capitales. Vous devez remplir tous les champs !</p>
+      <?php endif; ?>
 </main>
 <?php include "footer.php" ?>

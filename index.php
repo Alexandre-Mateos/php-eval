@@ -28,6 +28,11 @@ var_dump($houses);
                   </tr>
             <?php endforeach; ?>
       </table>
+
+      <?php if(isset($_GET["ajout"]) && $_GET["ajout"] === "ok") : ?>
+            <p>Maison ajoutée avec succès</p>
+      <?php endif; ?>
+
 </main>
 <?php include "footer.php" ?>
 
