@@ -1,5 +1,4 @@
 <?php
-var_dump($_POST);
 require "db.php";
 
 // Verification of the presence of all the data expected. If not, user redirected to ajout.php?error=1

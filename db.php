@@ -6,7 +6,3 @@ $pdo = new PDO(
       'root',
       ''
 );
-
-//var_dump($pdo);
-
-?>

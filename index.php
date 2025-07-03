@@ -7,8 +7,6 @@ $sql = "SELECT * FROM maison";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $houses = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($houses);
 ?>
 <?php include "header.php" ?>
 <main>

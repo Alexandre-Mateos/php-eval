@@ -5,5 +5,3 @@ $sql = "SELECT COUNT(*) AS 'nb' FROM maison";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $count = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($count);

@@ -5,5 +5,3 @@ $sql = "SELECT SUM(prix) AS 'sum' FROM maison";
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $sum = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($sum);
