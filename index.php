@@ -18,7 +18,7 @@ var_dump($houses);
                   <th>Nombre de pièces</th>
                   <th>Prix</th>
             </tr>
-            //Generate all the the table lines with a loop, using data from table "maison" ($houses)
+<!--            Generate all the the table lines with a loop, using data from table "maison" ($houses)-->
             <?php foreach ($houses as $house) : ?>
                   <tr>
                         <td><?php echo $house["nom"] ?></td>

@@ -6,7 +6,7 @@
             <label for="address">Adresse</label>
             <textarea id="address" type="text" name="address"></textarea>
             <label for="nb_pieces">Nombre de pièces</label>
-            <input id="nb_pieces" type="text" name="nb_pieces">
+            <input id="nb_pieces" type="number" name="nb_pieces">
             <label for="price">Prix (en €)</label>
             <input id="price" type="number" name="price">
             <button type="submit">Ajouter</button>
