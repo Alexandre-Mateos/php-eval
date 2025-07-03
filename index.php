@@ -17,6 +17,13 @@ $houses = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <p>Valeur totale du parc immobilier : <?php echo $sum[0]["sum"] ?> €</p>
       </div>
       <h2 class="py-3">Liste de nos maisons</h2>
+      <!--      Alert when the house is added with success to the database-->
+      <?php if (isset($_GET["ajout"]) && $_GET["ajout"] === "ok") : ?>
+            <div class="alert alert-success d-flex justify-content-between" role="alert">
+                  <p>Maison ajoutée avec succès</p>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+      <?php endif; ?>
       <table class="mx-auto table table-striped">
             <tr>
                   <th>Nom</th>
@@ -34,11 +41,6 @@ $houses = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   </tr>
             <?php endforeach; ?>
       </table>
-
-      <?php if (isset($_GET["ajout"]) && $_GET["ajout"] === "ok") : ?>
-            <p>Maison ajoutée avec succès</p>
-      <?php endif; ?>
-
 </main>
 <?php include "footer.php" ?>
 
