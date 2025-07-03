@@ -17,10 +17,10 @@ if (
 $sql = "INSERT INTO maison (nom, adresse, nb_pieces, prix) VALUES (:nom, :adresse, :nb_pieces, :prix)";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([
-      'nom' => $_POST['name'],
-      'adresse' => $_POST['address'],
-      'nb_pieces' => $_POST['nb_pieces'],
-      'prix' => $_POST['price']
+      'nom' => htmlspecialchars($_POST['name']),
+      'adresse' => htmlspecialchars($_POST['address']),
+      'nb_pieces' => htmlspecialchars($_POST['nb_pieces']),
+      'prix' => htmlspecialchars($_POST['price'])
 ]);
 
 //Once the house is added to the database, user redirected to index.php?ajout=ok
